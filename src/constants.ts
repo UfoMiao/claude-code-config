@@ -26,6 +26,7 @@ export type AiOutputLanguage = keyof typeof AI_OUTPUT_LANGUAGES;
 
 export const I18N = {
   'zh-CN': {
+    multiSelectHint: '（空格选择，a全选，i反选，回车确认）',
     selectScriptLang: '选择ZCF显示语言',
     selectConfigLang: '选择 Claude Code 配置语言',
     selectAiOutputLang: '选择 AI 输出语言',
@@ -81,7 +82,7 @@ export const I18N = {
     configSuccess: '配置文件已复制到',
     apiConfigSuccess: 'API 配置完成',
     mcpConfigSuccess: 'MCP 服务已配置',
-    selectMcpServices: '选择要安装的 MCP 服务（空格选择，a全选，i反选，回车确认）',
+    selectMcpServices: '选择要安装的 MCP 服务',
     allServices: '全部安装',
     mcpServiceInstalled: '已选择的 MCP 服务',
     enterExaApiKey: '请输入 Exa API Key（可从 https://dashboard.exa.ai/api-keys 获取）',
@@ -180,6 +181,7 @@ export const I18N = {
     failedToReadFile: '读取文件失败：',
     failedToWriteFile: '写入文件失败：',
     failedToCopyFile: '复制文件失败：',
+    failedToRemoveFile: '删除文件失败：',
     failedToReadDirectory: '读取目录失败：',
     failedToGetStats: '获取文件状态失败：',
     sourceDirNotExist: '源目录不存在：',
@@ -214,8 +216,35 @@ export const I18N = {
     spaceToSelectReturn: '- 空格选择，回车提交',
     // Windows detection
     windowsDetected: '检测到 Windows 系统，将自动配置兼容格式',
+    // BMAD agents
+    selectWorkflowType: '选择要安装的工作流类型',
+    workflowOption: {
+      featPlanUx: '功能规划和 UX 设计 (feat + planner + ui-ux-designer)',
+      sixStepsWorkflow: '六步工作流 (workflow)',
+      bmadWorkflow: 'BMAD 敏捷开发流程 (7个专业AI代理)',
+    },
+    bmadAgentsTitle: 'BMAD-METHOD 代理',
+    selectBmadAgents: '选择要安装的 BMAD 代理',
+    bmadAgentInstalled: '已安装 BMAD 代理',
+    atLeastOneAgent: '至少选择一个代理',
+    // Workflow installation messages
+    installingWorkflow: '正在安装工作流',
+    installedCommand: '已安装命令',
+    installedAgent: '已安装代理',
+    failedToInstallCommand: '安装命令失败',
+    failedToInstallAgent: '安装代理失败',
+    workflowInstallSuccess: '工作流安装成功',
+    workflowInstallError: '工作流安装出错',
+    cleaningOldFiles: '清理旧版本文件',
+    removedOldFile: '已删除旧文件',
+    installingBmadAgents: '正在安装 BMAD-METHOD 代理',
+    installingAllBmadAgents: '安装所有 BMAD 代理（BMAD 工作流必需）',
+    installedBmadWorkflowCommand: '已安装 BMAD 工作流命令',
+    installedBmadAgent: '已安装 BMAD 代理',
+    bmadAgentsInstallSuccess: '成功安装 BMAD 代理',
   },
   en: {
+    multiSelectHint: ' (Space to select, a to select all, i to invert, Enter to confirm)',
     selectScriptLang: 'Select ZCF display language',
     selectConfigLang: 'Select Claude Code configuration language',
     selectAiOutputLang: 'Select AI output language',
@@ -271,8 +300,7 @@ export const I18N = {
     configSuccess: 'Config files copied to',
     apiConfigSuccess: 'API configured',
     mcpConfigSuccess: 'MCP services configured',
-    selectMcpServices:
-      'Select MCP services to install (space to select, a to select all, i to deselect, enter to confirm)',
+    selectMcpServices: 'Select MCP services to install',
     allServices: 'Install all',
     mcpServiceInstalled: 'Selected MCP services',
     enterExaApiKey: 'Enter Exa API Key (get from https://dashboard.exa.ai/api-keys)',
@@ -371,6 +399,7 @@ export const I18N = {
     failedToReadFile: 'Failed to read file:',
     failedToWriteFile: 'Failed to write file:',
     failedToCopyFile: 'Failed to copy file:',
+    failedToRemoveFile: 'Failed to remove file:',
     failedToReadDirectory: 'Failed to read directory:',
     failedToGetStats: 'Failed to get stats for:',
     sourceDirNotExist: 'Source directory does not exist:',
@@ -406,6 +435,32 @@ export const I18N = {
     spaceToSelectReturn: '- Space to select. Return to submit',
     // Windows detection
     windowsDetected: 'Windows detected, will configure compatible format',
+    // BMAD agents
+    selectWorkflowType: 'Select workflow type to install',
+    workflowOption: {
+      featPlanUx: 'Feature Planning and UX Design (feat + planner + ui-ux-designer)',
+      sixStepsWorkflow: 'Six Steps Workflow (workflow)',
+      bmadWorkflow: 'BMAD Agile Development Process (7 specialized AI agents)',
+    },
+    bmadAgentsTitle: 'BMAD-METHOD Agents',
+    selectBmadAgents: 'Select BMAD agents to install',
+    bmadAgentInstalled: 'Installed BMAD agents',
+    atLeastOneAgent: 'You must choose at least one agent',
+    // Workflow installation messages
+    installingWorkflow: 'Installing workflow',
+    installedCommand: 'Installed command',
+    installedAgent: 'Installed agent',
+    failedToInstallCommand: 'Failed to install command',
+    failedToInstallAgent: 'Failed to install agent',
+    workflowInstallSuccess: 'workflow installed successfully',
+    workflowInstallError: 'workflow installation had errors',
+    cleaningOldFiles: 'Cleaning up old version files',
+    removedOldFile: 'Removed old file',
+    installingBmadAgents: 'Installing BMAD-METHOD Agents',
+    installingAllBmadAgents: 'Installing all BMAD agents (required for BMAD workflow)',
+    installedBmadWorkflowCommand: 'Installed BMAD workflow command',
+    installedBmadAgent: 'Installed BMAD agent',
+    bmadAgentsInstallSuccess: 'Successfully installed BMAD agents',
   },
 };
 
